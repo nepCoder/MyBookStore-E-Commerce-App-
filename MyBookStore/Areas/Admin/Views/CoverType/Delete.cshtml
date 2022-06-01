@@ -1,0 +1,22 @@
+﻿@model CoverType
+@{
+    ViewData["Title"] = "Delete";
+}
+
+
+<form method="post" asp-action="DeletePOST" asp-route-id="@Model.Id">
+    <div class="container-fluid border m-3 mt-5 p-3">
+
+        <div>
+            <h2>Delete Cover Type</h2>
+        </div>
+
+          <div class="mb-3 border-1">
+            <label asp-for="Name" class="form-label"></label>
+            <input asp-for="Name" class="form-control bg-light" disabled>
+          </div>
+    
+          <button type="submit" class="btn btn-danger col-2 ml-0 m-1">Delete</button>
+          <button asp-controller="CoverType" asp-action="Index" type="submit" class="btn btn-secondary col-2 m-1">Go Back</button>
+    </div>  
+</form>
